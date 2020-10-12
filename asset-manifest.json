@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Briza/static/css/main.e6185a8c.chunk.css",
+    "main.js": "/Briza/static/js/main.b3ed3ed6.chunk.js",
+    "main.js.map": "/Briza/static/js/main.b3ed3ed6.chunk.js.map",
+    "runtime-main.js": "/Briza/static/js/runtime-main.1b279d7b.js",
+    "runtime-main.js.map": "/Briza/static/js/runtime-main.1b279d7b.js.map",
+    "static/js/2.f22060e4.chunk.js": "/Briza/static/js/2.f22060e4.chunk.js",
+    "static/js/2.f22060e4.chunk.js.map": "/Briza/static/js/2.f22060e4.chunk.js.map",
+    "index.html": "/Briza/index.html",
+    "precache-manifest.07f13eae330866c25203ba3809f7dee8.js": "/Briza/precache-manifest.07f13eae330866c25203ba3809f7dee8.js",
+    "service-worker.js": "/Briza/service-worker.js",
+    "static/css/main.e6185a8c.chunk.css.map": "/Briza/static/css/main.e6185a8c.chunk.css.map",
+    "static/js/2.f22060e4.chunk.js.LICENSE.txt": "/Briza/static/js/2.f22060e4.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/Briza/static/media/Background.d4e7eb4a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b279d7b.js",
+    "static/js/2.f22060e4.chunk.js",
+    "static/css/main.e6185a8c.chunk.css",
+    "static/js/main.b3ed3ed6.chunk.js"
+  ]
+}
