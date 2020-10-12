@@ -1,0 +1,30 @@
+
+.App {
+  text-align: center;
+  height: 150vh;
+  background: url('./../icons/Background.png');
+  background-size: cover;
+
+  .overlay {
+    width: 100vw;
+    height: 150vh;
+    background: rgba(0,0,0,0.58);
+  }
+
+  .intro-button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    width: 350px;
+    
+    button {
+      margin: 0
+    }
+  }
+
+
+  
+}
+
+
