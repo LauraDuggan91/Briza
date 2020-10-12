@@ -1,7 +1,7 @@
 import '../styles/modal.scss';
 import '../styles/formModal.scss'
 
-import React, {useState, useRef, createRef} from 'react';
+import React, {useState, useRef} from 'react';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Box from '../icons/Box';
