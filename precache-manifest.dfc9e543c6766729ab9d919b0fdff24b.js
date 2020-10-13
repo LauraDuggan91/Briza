@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "66ff100bbe6909dd65a091d87039c439",
+    "revision": "830e26802f552eb82d0fe8ace8e18111",
     "url": "/Briza/index.html"
   },
   {
-    "revision": "4e781d19ab2364299fab",
-    "url": "/Briza/static/css/main.e6185a8c.chunk.css"
+    "revision": "3dc65f14added1978130",
+    "url": "/Briza/static/css/main.acbe0777.chunk.css"
   },
   {
     "revision": "8eeb202c337157771560",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Briza/static/js/2.f22060e4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4e781d19ab2364299fab",
-    "url": "/Briza/static/js/main.b3ed3ed6.chunk.js"
+    "revision": "3dc65f14added1978130",
+    "url": "/Briza/static/js/main.6c3cc866.chunk.js"
   },
   {
     "revision": "53d1019204f3a03cff7f",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Briza/precache-manifest.07f13eae330866c25203ba3809f7dee8.js"
+  "/Briza/precache-manifest.dfc9e543c6766729ab9d919b0fdff24b.js"
 );
 
 self.addEventListener('message', (event) => {
