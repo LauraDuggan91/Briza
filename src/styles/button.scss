@@ -1,14 +1,16 @@
+@import './defaults.scss';
+
 .btn-success {
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
-    background-color: #71f79f;
+    background-color: $success-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     border: none;
     padding: 15px 98px;
     cursor: pointer;
-    color: #333333;
+    color: $font-color;
     margin-top: 62px;
     margin-bottom: 32px;
     &:hover {
@@ -21,8 +23,8 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    color: #0074D9;
-    background: #A8DAFF;
+    color: $primary-color;
+    background: $secondary-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px; 
     margin-top: 30px;
@@ -34,12 +36,17 @@
     svg {
         margin-left: 8px;
     }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
 }
 
 .btn-ghost {
     height: 36px;
     width: 36px;
-    background-color: #ffffff;
+    background-color: $white-color;
     border-radius: 2.5px;
     margin-left: 8px;
     cursor: pointer;

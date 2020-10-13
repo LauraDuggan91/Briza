@@ -1,4 +1,4 @@
-
+@import './defaults.scss';
 
 .bounding-box, .form-modal-body {
     width: 800px;
@@ -8,7 +8,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 8px;
-    background: #F9F9F9;
+    background: $background-color;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
   
     .close-icon {
@@ -26,7 +26,7 @@
   
   
     .background-mask {
-      background-color: #A8DAFF;
+      background-color: $secondary-color;
       margin: 80px auto 0 auto;
       height: 100px;
       width: 100px;
@@ -58,7 +58,7 @@
       li {
         font-size: 18px;
         font-weight: normal;
-        color: #333333;
+        color: $font-color;
         line-height: 21px;
         margin-top: 30px;
       }
@@ -68,8 +68,8 @@
         width: 36px;
         display: inline-block;
         border-radius: 50%;
-        background-color: #A8DAFF;
-        color: #0074D9;
+        background-color: $secondary-color;
+        color: $primary-color;
         margin-right: 20px;
         font-weight: bold;
         line-height: 36px;
@@ -80,7 +80,7 @@
       }
     }
     .powered-by {
-      color: #BDBDBD;
+      color: $border-color;
       font-size: 14px;
       margin-bottom: 51px;
 

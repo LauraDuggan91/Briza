@@ -1,7 +1,7 @@
 import '../styles/modal.scss';
 import '../styles/formModal.scss'
 
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Box from '../icons/Box';
@@ -21,29 +21,35 @@ const FormModal = () => {
     const [modalOpen, setModalOpen ] = useState(true)
     const [activeQuestion, setActiveQuestion] = useState(0)
     const questionNumber = activeQuestion + 1
-    const questionRef = useRef(null)
+    const questionRef = useRef([activeQuestion]);
+    const [inputValue, setInputValue] = useState()
 
-    const handleScroll = () => {
-        questionRef.current.scrollIntoView({
+
+    useEffect(() => {
+        questionRef.current = questionRef.current.slice(0, questions.length);
+        questionRef.current[activeQuestion] && questionRef.current[activeQuestion].scrollIntoView({
             behavior: "smooth",
             block: "center"
         });
-    }
+     }, [activeQuestion]);
 
     const nextQuestion = () => {
         if (activeQuestion === questions.length - 1) {
             setActiveQuestion(0)
         }
         setActiveQuestion(activeQuestion + 1)
-      }
+    }
     
-      const prevQuestion = () => {
+    const prevQuestion = () => {
         if (activeQuestion === 0) {
             setActiveQuestion(questions.length - 1)
         }
         setActiveQuestion(activeQuestion - 1)
-      }
+    }
 
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value)
+    }
 
     const iconName = (icon) => {
         switch(icon) {
@@ -69,13 +75,13 @@ const FormModal = () => {
 
             <form>
                 {questions.map((question, index) => (
-                    <div className={index === activeQuestion ? 'question active' : 'question'} key={index} tabIndex={1} ref={index === activeQuestion ? questionRef : null}>
+                    <div className={index === activeQuestion ? 'question active' : 'question'} key={index} tabIndex={1} ref={el => questionRef.current[index] = el}>
                         <div className='question-title'><span>1</span>{question.title}</div>
                         {question.type === 'text'
                         ? 
                         <>
-                            <Input placeholder={question.placeholder}/>
-                            <Button size='sm' variant='secondary' onClick={e => {e.stopPropagation(); e.preventDefault(); nextQuestion(); handleScroll()}}>ENTER<Check size={18}/></Button>
+                            <Input placeholder={question.placeholder} onChange={handleInputChange} isEmpty={!inputValue || inputValue.length === 0}/>
+                            <Button disabled={!inputValue || inputValue.length === 0} size='sm' variant='secondary' onClick={e => {e.stopPropagation(); e.preventDefault(); nextQuestion()}}>ENTER<Check size={18}/></Button>
                         </>
                         :
                         <div className='card-grid'>
@@ -88,7 +94,6 @@ const FormModal = () => {
                                     onClick={e => {
                                         e.stopPropagation();
                                         nextQuestion();
-                                        handleScroll();
                                     }}
                                 />
                             ))}
@@ -98,7 +103,7 @@ const FormModal = () => {
                     </div>
                 ))}
                 <div>
-                    <Button size='md' variant='success' onClick={() => console.log('clocled')}>GET QUOTES</Button>
+                    <Button size='md' variant='success' onClick={e => {e.stopPropagation(); e.preventDefault();}}>GET QUOTES</Button>
                 </div>
             </form>
             <div className='question-nav'>
